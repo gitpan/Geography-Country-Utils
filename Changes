@@ -1,5 +1,11 @@
-Revision history for Perl extension Geography::Country::FIPS.
-
-0.01  Mon Mar  5 17:19:18 2001
-	- original version; created by h2xs 1.16
-
+____________________________________________________________________________
+[  4087] By: autrijus                              on 2003/02/05  04:03:47
+        Log: * 1.06 of Geography::Country::Utils.
+	   + MANIFEST Makefile.PL README
+	   + lib/Geography/Country/Dial.pm
+	   + lib/Geography/Country/FIPS.pm
+	   + lib/Geography/Country/FIPS/Capitals.pm
+	   + lib/Geography/Country/TZ.pm
+	   + lib/Geography/Country/TZ/Zone.pm
+	   + lib/Geography/Country/Utils.pm t/0fips.t
+	   + t/1capital.t t/2dial.t

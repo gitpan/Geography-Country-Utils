@@ -1,23 +1,10 @@
-# Before `make install' is performed this script should be runnable with
-# `make test'. After `make install' it should work as `perl test.pl'
+# $File: //member/autrijus/Geography-Country-Utils/t/1capital.t $ $Author: autrijus $
+# $Revision: #1 $ $Change: 4087 $ $DateTime: 2003/02/05 04:03:47 $
 
-######################### We start with some black magic to print on failure.
+use Test;
+BEGIN { plan tests => 2 }
 
-# Change 1..1 below to 1..last_test_to_print .
-# (It may become useful if the test is moved to ./t subdirectory.)
+use Geography::Country::Utils qw(Capital);
 
-BEGIN { $| = 1; print "1..2\n"; }
-END {print "not ok 1\n" unless $loaded;}
-use Geography::Country::FIPS::Capitals qw(Capital);
-$loaded = 1;
-print "ok 1\n";
-
-print "not " unless (Capital('SW') eq 'Stockholm');
-print "ok 2\n";
-
-######################### End of black magic.
-
-# Insert your test code below (better if it prints "ok 13"
-# (correspondingly "not ok 13") depending on the success of chunk 13
-# of the test code):
-
+ok(defined &Capital);
+ok(Capital('SW'), 'Stockholm');

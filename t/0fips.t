@@ -1,39 +1,28 @@
-# Before `make install' is performed this script should be runnable with
-# `make test'. After `make install' it should work as `perl test.pl'
+# $File: //member/autrijus/Geography-Country-Utils/t/0fips.t $ $Author: autrijus $
+# $Revision: #1 $ $Change: 4087 $ $DateTime: 2003/02/05 04:03:47 $
 
-######################### We start with some black magic to print on failure.
+use Test;
+BEGIN { plan tests => 8 }
 
-# Change 1..1 below to 1..last_test_to_print .
-# (It may become useful if the test is moved to ./t subdirectory.)
+use Geography::Country::Utils qw(Name Code iso2fips fips2iso);
 
-BEGIN { $| = 1; print "1..5\n"; }
-END {print "not ok 1\n" unless $loaded;}
-use Geography::Country::FIPS qw(Name Code iso2fips fips2iso);
-$loaded = 1;
-print "ok 1\n";
+ok(defined &Name);
+ok(defined &Code);
+ok(defined &iso2fips);
+ok(defined &fips2iso);
 
-print "not " unless (Name('SW') eq 'Sweden');
-print "ok 2\n";
+ok(Name('SW'), 'Sweden');
 
-eval { require Net::Country; $l2 = 1; };
+my $l2 = eval { require Net::Country; 1 };
 
-if ($l2) {
+skip(
+    ($l2 ? 0 : "Skipping test on this platform"),
+    eval { iso2fips('IS') }, 'IC'
+);
 
-	print "not " unless (iso2fips('IS') eq 'IC');
-	print "ok 3\n";
-	print "not " unless (fips2iso('DA') eq 'DK');
-	print "ok 4\n";
-} else {
-	print "ok 3 # Skipping test on this platform\n";
-	print "ok 4 # Skipping test on this platform\n";
-}
+skip(
+    ($l2 ? 0 : "Skipping test on this platform"),
+    eval { fips2iso('DA') }, 'DK'
+);
 
-print "not " unless (Code('Greenland') eq 'GL');
-print "ok 5\n";
-
-######################### End of black magic.
-
-# Insert your test code below (better if it prints "ok 13"
-# (correspondingly "not ok 13") depending on the success of chunk 13
-# of the test code):
-
+ok(Code('Greenland'), 'GL');

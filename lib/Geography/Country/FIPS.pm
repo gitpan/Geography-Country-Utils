@@ -1,3 +1,6 @@
+# $File: //member/autrijus/Geography-Country-Utils/lib/Geography/Country/FIPS.pm $ $Author: autrijus $
+# $Revision: #1 $ $Change: 4087 $ $DateTime: 2003/02/05 04:03:47 $
+
 #                              -*- Mode: Perl -*- 
 ################### Original code was by
 # ITIID           : $ITI$ $Header $__Header$
@@ -29,25 +32,26 @@
 package Geography::Country::FIPS;
 
 require Exporter;
-@EXPORT_OK = qw(Name Code iso2fips fips2iso);
+@EXPORT_OK = qw(Name Code country2fips fips2country iso2fips fips2iso);
 @ISA = qw(Exporter);
 
-$VERSION = 1.05;
+$VERSION = 1.06;
 
-while (<DATA>) {
-    chop;
-    ($cc, $rest) = split ' ', $_, 2;
+sub DATA ();
+foreach (split(/\n/, +DATA())) {
+    ($cc, $rest) = split(' ', $_, 2);
     next unless $cc;
     $country{$cc} = $rest;
     $rest =~ s/\s*\(.*\)\s*$//;
     $rest =~ s/,.*$//;
     $cross{lc($rest)} = $cc;
-    }
-close (DATA);
+}
 
-sub Name { $country{uc($_[0])} || $_[0] };
+sub Name { goto &country2fips }
+sub Code { goto &fips2country }
 
-sub Code { $cross{lc($_[0])} || $_[0] };
+sub country2fips { $country{uc($_[0])} || $_[0] }
+sub fips2country { $cross{lc($_[0])} || $_[0] }
 
 sub iso2fips {
         my $c = uc(shift);
@@ -75,7 +79,7 @@ sub fips2iso {
 
 1;
 
-__DATA__
+use constant DATA => << '.';
 AA	Aruba
 AC	Antigua and Barbuda
 AF	Afghanistan
@@ -325,3 +329,4 @@ YO	Yugoslavia
 YS	Yemen (Aden)
 ZA	Zambia
 ZI	Zimbabwe
+.
