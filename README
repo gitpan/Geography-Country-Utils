@@ -1,0 +1,6 @@
+To convert FIPS code to country name:
+Geography::Country::FIPS::Name($code)
+e.g., IS = Israel
+To convert ISO to FIPS (might fail with several third world countries)
+Geography::Country::FIPS::iso2fipx($code)
+e.g., IS = IC, IL = IS

@@ -1,0 +1,12 @@
+Changes
+MANIFEST
+Makefile.PL
+README
+lib/Geography/Country/FIPS.pm
+lib/Geography/Country/FIPS/Capitals.pm
+lib/Geography/Country/Dial.pm
+lib/Geography/Country/TZ.pm
+lib/Geography/Country/TZ/Zone.pm
+t/0fips.t
+t/1capital.t
+t/2dial.t
