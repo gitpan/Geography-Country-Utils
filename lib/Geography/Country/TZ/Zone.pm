@@ -123,7 +123,9 @@ sub find {
                         $d = $t[3] if ($t[6] + 1 == $l);
                         $t += 3600 * 24;
                 }
+		return $d;
         }
+#	$exp = "$exp>=1" if ($map2{$exp});
         if ($exp =~ s/([<>])\=(\d+)$//) {
                 my $val = $2;
                 my $neg = ($1 eq "<") ? -1 : 1;
@@ -135,7 +137,7 @@ sub find {
                         $t += 3600 * 24 * $neg;
                 }
         }
-        die "Unparsable";
+        die "Unparsable $exp";
 }
 
 sub maketime {

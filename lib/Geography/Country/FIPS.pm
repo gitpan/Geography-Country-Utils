@@ -32,7 +32,7 @@ require Exporter;
 @EXPORT_OK = qw(Name Code iso2fips fips2iso);
 @ISA = qw(Exporter);
 
-$VERSION = 1.04;
+$VERSION = 1.05;
 
 while (<DATA>) {
     chop;
