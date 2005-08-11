@@ -1,6 +1,3 @@
-# $File: //member/autrijus/Geography-Country-Utils/t/0fips.t $ $Author: autrijus $
-# $Revision: #1 $ $Change: 4087 $ $DateTime: 2003/02/05 04:03:47 $
-
 use Test;
 BEGIN { plan tests => 8 }
 

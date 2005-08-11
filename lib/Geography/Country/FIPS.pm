@@ -1,6 +1,3 @@
-# $File: //member/autrijus/Geography-Country-Utils/lib/Geography/Country/FIPS.pm $ $Author: autrijus $
-# $Revision: #1 $ $Change: 4087 $ $DateTime: 2003/02/05 04:03:47 $
-
 #                              -*- Mode: Perl -*- 
 ################### Original code was by
 # ITIID           : $ITI$ $Header $__Header$
@@ -305,6 +302,7 @@ TU	Turkey
 TV	Tuvalu
 TW	Taiwan 
 TZ	Tanzania, United Republic of 
+UA	Ukraine
 UG	Uganda
 UK	United Kingdom
 UR	USSR

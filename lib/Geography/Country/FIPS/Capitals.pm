@@ -228,6 +228,7 @@ TU Ankara
 TV Funafuti
 TW Taipei
 TZ Dar es Salaam
+UA Kiev
 UG Kampala
 UK London
 US Washington, DC

@@ -1,11 +1,11 @@
-____________________________________________________________________________
-[  4087] By: autrijus                              on 2003/02/05  04:03:47
-        Log: * 1.06 of Geography::Country::Utils.
-	   + MANIFEST Makefile.PL README
-	   + lib/Geography/Country/Dial.pm
-	   + lib/Geography/Country/FIPS.pm
-	   + lib/Geography/Country/FIPS/Capitals.pm
-	   + lib/Geography/Country/TZ.pm
-	   + lib/Geography/Country/TZ/Zone.pm
-	   + lib/Geography/Country/Utils.pm t/0fips.t
-	   + t/1capital.t t/2dial.t
+== Changes for 1.07 - Aug 12, 2005
+
+* Patch from T. Denis to add UA (Ukraine/Kiev).
+
+== Changes for 1.06 - Feb 5, 2003
+
+* Initial check-in; assumed maintainership from Ariel Brosh.
+
+== Changes for 1.05 - Mar 6, 2001
+
+* Original version.

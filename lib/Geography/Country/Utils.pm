@@ -1,8 +1,5 @@
-# $File: //member/autrijus/Geography-Country-Utils/lib/Geography/Country/Utils.pm $ $Author: autrijus $
-# $Revision: #1 $ $Change: 4087 $ $DateTime: 2003/02/05 04:03:47 $
-
 package Geography::Country::Utils;
-$Geography::Country::Utils::VERSION = '1.06';
+$Geography::Country::Utils::VERSION = '1.07';
 
 use strict;
 
@@ -12,8 +9,8 @@ Geography::Country::Utils - Utilities for country-specific information
 
 =head1 VERSION
 
-This document describes version 1.06 of Geography::Country::Utils,
-released February 5, 2003.
+This document describes version 1.07 of Geography::Country::Utils,
+released August 12, 2005.
 
 =head1 SYNOPSIS
 
@@ -148,7 +145,7 @@ Autrijus Tang E<lt>autrijus@autrijus.orgE<gt> is the current maintainer.
 
 Copyright 2001, 2002 by Ariel Brosh.
 
-Copyright 2003 by Autrijus Tang.
+Copyright 2003, 2005 by Autrijus Tang.
 
 This program is free software; you can redistribute it and/or modify it
 under the same terms as Perl itself.

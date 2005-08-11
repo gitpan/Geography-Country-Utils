@@ -12,3 +12,4 @@ lib/Geography/Country/Utils.pm
 t/0fips.t
 t/1capital.t
 t/2dial.t
+META.yml                                 Module meta-data (added by MakeMaker)
